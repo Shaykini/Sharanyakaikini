@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #d8b4ff;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: #d8b4ff;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #d8b4ff;
+            text-decoration: none;
+            padding: 14px 20px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #551a8b;
+            color: white;
+        }
+
+        .portfolio-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 50px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .portfolio-box {
+            position: relative;
+            background-color: #1a1a1a;
+            color: white;
+            border-radius: 10px;
+            height: 300px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            overflow: hidden;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .portfolio-box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            filter: brightness(0.5);
+            transition: filter 0.3s;
+        }
+
+        .portfolio-box:hover img {
+            filter: brightness(0.8);
+        }
+
+        .portfolio-box span {
+            position: relative;
+            z-index: 1;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .portfolio-box:hover {
+            transform: scale(1.1);
+            background-color: #8732a8;
+            color: #fff;
+        }
+
+        .portfolio-section > div:nth-child(4),
+        .portfolio-section > div:nth-child(5) {
+            grid-column: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #d8b4ff;
+        }
+
+        a {
+            color: #d8b4ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html">Shay</a></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="portfolio-section">
+        <div class="portfolio-box" onclick="location.href='blender.html'">
+            <img src="blender1.png" alt="Blender">
+            <span>Blender</span>
+        </div>
+        <div class="portfolio-box" onclick="location.href='illustrations.html'">
+            <img src="illustration4.png" alt="Digital Illustrations">
+            <span>Digital Illustrations</span>
+        </div>
+        <div class="portfolio-box" onclick="location.href='photoshop.html'">
+            <img src="photoshop1.png" alt="Photoshop and Illustrator">
+            <span>Photoshop and Illustrator</span>
+        </div>
+        <div class="portfolio-box" onclick="window.open('https://drive.google.com/drive/folders/13MHNydAOYaOANQlPs_GXoJuGW9egyD-6?usp=drive_link', '_blank')">
+            <img src="animation.png" alt="Animation">
+            <span>Animation</span>
+        </div>
+        <div class="portfolio-box" onclick="location.href='hands-on.html'">
+            <img src="handson1.jpg" alt="Hands-On Work">
+            <span>Hands-On Work</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sharanya K. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
